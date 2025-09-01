@@ -3,7 +3,8 @@
 // controlla che sia nella lista di chi può accedere,
 // stampa un messaggio appropriato sull’esito del controllo, utilizzando un ciclo for.
 
-const arrEmail = [
+// Array con le mail
+const arrMail = [
   "mario.rossi@fakeemail.com",
   "lucia.bianchi@fakeemail.com",
   "giovanni.verdi@fakeemail.com",
@@ -15,3 +16,21 @@ const arrEmail = [
   "andrea.moretto@fakeemail.com",
   "elisa.ferri@fakeemail.com"
 ];
+// input
+const mailUser = prompt("Inserisci la tua email");
+// dichiarazione variabile 
+let tempMail = false;
+
+// ciclo per scorrere l'array
+for(i= 0; i< arrMail.length; i++){
+    // condizione per verificare che la mail è all'interno dell'array
+    if(mailUser === arrMail[i]){
+        tempMail = true;
+    }
+}
+// condizione per far stampare i due casi
+if(tempMail){
+    console.log("La tua email è in lista, puoi entrare alla festa");
+}else{ 
+    console.log("La tua email non è in lista, non puoi entrare"); 
+}
